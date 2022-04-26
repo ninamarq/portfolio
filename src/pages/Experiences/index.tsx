@@ -1,3 +1,10 @@
+import Header from '../../components/Header';
+
 export default function Experiences() {
-  return <h1>Experiences</h1>;
+  return (
+    <div>
+      <Header />
+      <h1>Experiences</h1>
+    </div>
+  );
 }

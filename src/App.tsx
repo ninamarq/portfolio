@@ -4,6 +4,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Experiences from './pages/Experiences';
 import Projects from './pages/Projects';
+import './global.scss';
 
 function App() {
   return (
