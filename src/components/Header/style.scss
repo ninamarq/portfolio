@@ -3,10 +3,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 30rem;
-  background-color: var(--yellow);
+  width: 3%;
+  height: 60%;
+  background-color: var(--blue);
   border-radius: 2rem;
+  position: fixed;
+  left: 2rem;
+  top: 20%;
 
   .link-list {
     display: flex;
@@ -19,16 +22,22 @@
 
     li {
       list-style: none;
+      transition: .5s;
+      font-size: 1.5rem;
+      
       .pages-link {
         text-decoration: none;
         all: unset;
       }
-      transition: .5s;
-      font-size: 1.5rem;
+
       &:hover {
-        color: #1a1a1ad7;
+        color: #1a1a1abd;
         transition: .5s;
         cursor: pointer;
+      }
+
+      .route {
+        color: #fff;
       }
     }
   }
