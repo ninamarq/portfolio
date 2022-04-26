@@ -30,22 +30,15 @@
       h1 {
         margin: 0;
         font-size: 4rem;
+        span {
+          color: var(--blue);
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: .25rem solid var(--yellow);
+          animation: blink .5s step-end infinite alternate;
+        }
       }
 
-      span {
-        color: var(--blue);
-        overflow: hidden;
-        white-space: nowrap;
-        border-right: .25rem solid var(--yellow);
-        animation: typing 4s steps(40) 1s 1 normal both,
-        blink .5s step-end infinite alternate;
-      }
-      
-      @keyframes typing {
-        from { width: 0 }
-        to { width: 15rem }
-      }
-          
       @keyframes blink {
         50% {
           border-color: transparent
@@ -54,8 +47,27 @@
 
       h2 {
         font-size: 1.5rem;
+        span {
+          margin: 0 1.2rem;
+          display: inline-block;
+          transform: rotate(45deg);
+          animation: shaking 2s infinite;
+          font-size: 2rem;
+        }
+
+        @keyframes shaking {
+          0% {
+            transform: rotate(-45deg);
+          }
+          50% {
+            transform: rotate(30deg);
+          }
+          100% {
+            transform: rotate(-45deg);
+          }
+        }
       }
-  
+
       h3 {
         font-size: 1rem;
         background-color: var(--blue);
@@ -64,7 +76,7 @@
         width: 90%;
         color: #FFF;
 
-        
+
       }
     }
 
