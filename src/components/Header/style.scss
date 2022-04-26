@@ -8,7 +8,7 @@
   background-color: var(--blue);
   border-radius: 2rem;
   position: fixed;
-  left: 2rem;
+  right: 2rem;
   top: 20%;
 
   .link-list {
@@ -23,7 +23,7 @@
     li {
       list-style: none;
       transition: .5s;
-      font-size: 1.5rem;
+      font-size: 130%;
       
       .pages-link {
         text-decoration: none;
