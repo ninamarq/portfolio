@@ -1,48 +1,48 @@
-import { useNavigate } from 'react-router-dom';
-import { MdDeveloperMode } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import { AiFillHome } from 'react-icons/ai';
+import { BsFillPersonFill } from 'react-icons/bs';
+import { FaSuitcase, FaTelegramPlane } from 'react-icons/fa';
+import { CgWebsite } from 'react-icons/cg';
+import './style.scss';
 
 export default function Header(): JSX.Element {
   const pages = [
     {
-      name: 'Home',
+      name: <AiFillHome />,
       route: '',
     },
     {
-      name: 'Sobre',
+      name: <BsFillPersonFill />,
       route: 'about',
     },
     {
-      name: 'Experiências',
+      name: <FaSuitcase />,
       route: 'experiences',
     },
     {
-      name: 'Projetos',
+      name: <CgWebsite />,
       route: 'projects',
     },
     {
-      name: 'Contato',
+      name: <FaTelegramPlane />,
       route: 'contact',
     },
   ];
-  const navigate = useNavigate();
   return (
-    <header>
-      <h1>
-        <MdDeveloperMode />
-        Marina Marques
-      </h1>
-      {
-        pages.map((element) => (
-          <button
-            type="button"
-            key={element.name}
-            className="pages-link"
-            onClick={() => navigate(`/${element.route}`)}
-          >
-            {element.name}
-          </button>
-        ))
-      }
+    <header className="header-container">
+      <ul className="link-list">
+        {
+          pages.map((element) => (
+            <li
+              key={element.route}
+            >
+              <Link className="pages-link" to={`/${element.route}`}>
+                {element.name}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
     </header>
   );
 }
