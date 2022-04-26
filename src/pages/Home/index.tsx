@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineCloudDownload } from 'react-icons/ai';
 import Header from '../../components/Header';
 import Profile from '../../assets/profile.jpeg';
 import './style.scss';
+import CV from '../../assets/curriculum_marina_marques.pdf';
 
 export default function Home() {
   const navigate = useNavigate();
-
   return (
     <div className="page-container">
       <Header />
@@ -31,7 +32,16 @@ export default function Home() {
           A new student and a new worker at the great Web Universe,
           a coffee lover ☕ and a happy developer.
         </p>
-        <button type="button">Download Resumé</button>
+        <section>
+          {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
+          <a href={CV} download="cv_marina.pdf">
+            <AiOutlineCloudDownload />
+            Download CV
+          </a>
+          <button type="button" onClick={() => navigate('/about')}>
+            About Me
+          </button>
+        </section>
       </div>
       <div className="right-container">
         <img src={Profile} alt="Marina Marques" />
