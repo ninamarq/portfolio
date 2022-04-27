@@ -7,18 +7,28 @@ import './style.scss';
 
 export default function Projects() {
   /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-  const [projects, setProjects] = useState<any>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const projectsAPI = async (): Promise<void> => setProjects?.(await getProjects());
+  // const [projects, setProjects] = useState<any>([]);
+  // const projectsAPI = async (): Promise<void> => setProjects?.(await getProjects());
 
-  useEffect(() => {
-    /* eslint-disable @typescript-eslint/no-floating-promises */
-    projectsAPI();
-    console.log('opa');
-    setLoading(false);
-  }, []);
+  // useEffect(() => {
+  //   /* eslint-disable @typescript-eslint/no-floating-promises */
+  //   projectsAPI();
+  // }, []);
 
-  console.log(loading);
+  const projects = [
+    {
+      id: 1,
+      name: 'createStore( )',
+      github_link: 'https://github.com/ninamarq/create-store',
+      img_link: 'https://github.com/ninamarq/create-store/blob/main/createstore.png?raw=true',
+    },
+    {
+      id: 2,
+      name: 'crud-typescript',
+      github_link: 'https://github.com/ninamarq/crud-typescript',
+      img_link: 'https://github.com/ninamarq/crud-typescript/blob/main/assets/telaInsomnia.png?raw=true',
+    },
+  ];
 
   return (
     <div className="projects-container">
@@ -31,7 +41,7 @@ export default function Projects() {
         {
             /* eslint-disable @typescript-eslint/no-unsafe-member-access */
             /* eslint-disable @typescript-eslint/no-unsafe-call */
-            projects?.map((element: IProject) => (
+            projects.map((element: IProject) => (
               <section key={element.id}>
                 <img src={element.img_link} alt={element.name} />
                 <div>

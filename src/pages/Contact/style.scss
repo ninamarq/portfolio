@@ -1,0 +1,76 @@
+.contact-container {
+  background-color: var(--light-grey);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin: 2rem 0;
+    font-size: 4rem;
+    align-self: center;
+  }
+
+  span {
+    color: var(--blue);
+    font-weight: 700;
+  }
+
+  .card-infos {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    border-radius: 2rem;
+    z-index: 5;
+    justify-content: center;
+    width: 70%;
+    height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: var(--dark-blue);
+
+    .contact-info {
+      margin: 0;
+      border-radius: 2rem 0 0 2rem;
+      height: 100%;
+      background-color: var(--blue);
+      color: #FFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 1.25rem;
+
+      h2 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 25rem;
+        svg {
+          margin: 0 1rem 0 0;
+        }
+      }
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 5rem;
+      svg {
+        font-size: 3.5rem;
+        transition: .5s;
+        color: var(--dark-blue);
+        &:hover {
+          color: var(--blue);
+          transition: .5s;
+        }
+      }
+    }
+  }
+}
