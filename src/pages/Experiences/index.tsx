@@ -1,10 +1,12 @@
 import { HiAcademicCap } from 'react-icons/hi';
 import { TiDeviceLaptop } from 'react-icons/ti';
+import SubExperience from './SubExperience';
 import './style.scss';
 
 export default function Experiences() {
   return (
     <div className="experience-container">
+      <SubExperience />
       <h1>
         Experi
         <span>ences</span>
