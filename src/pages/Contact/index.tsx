@@ -1,22 +1,12 @@
-import { ChangeEvent, useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillTelephoneFill, BsPinMap } from 'react-icons/bs';
-import { BiMailSend } from 'react-icons/bi';
+import { BsFillTelephoneFill, BsGithub, BsPinMap } from 'react-icons/bs';
+import { GrLinkedin } from 'react-icons/gr';
+import { SiMicrosoftoutlook } from 'react-icons/si';
 import './style.scss';
 import BackgroundPage from '../../components/BackgroundPage';
 import BackAndForward from '../../components/BackAndForward';
 
 export default function Contact() {
-  const [emailContent, setEmailContent] = useState({});
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setEmailContent({
-      ...emailContent,
-      [event.target.id]: event.target.value,
-    });
-  };
-  console.log(emailContent);
-
   return (
     <div className="contact-container">
       <BackgroundPage top="CON" bottom="TACT" />
@@ -39,30 +29,17 @@ export default function Contact() {
             Minas Gerais, Brazil
           </h2>
         </div>
-        <form>
-          <div>
-            <label htmlFor="name">
-              Name
-              <input onChange={(e) => handleChange(e)} type="text" id="name" />
-            </label>
-            <label htmlFor="email">
-              Email
-              <input onChange={(e) => handleChange(e)} type="text" id="email" />
-            </label>
-          </div>
-          <label htmlFor="subject">
-            Subject
-            <input onChange={(e) => handleChange(e)} type="text" id="subject" className="alone-inline" />
-          </label>
-          <label htmlFor="message">
-            Message
-            <input onChange={(e) => handleChange(e)} type="text" id="message" className="alone-inline" />
-          </label>
-          <button type="submit">
-            <BiMailSend />
-            Send
-          </button>
-        </form>
+        <div className="contact-links">
+          <a href="https://www.linkedin.com/in/marina-marqueso/" target="_blank" rel="noreferrer">
+            <GrLinkedin />
+          </a>
+          <a href="https://github.com/ninamarq" target="_blank" rel="noreferrer">
+            <BsGithub />
+          </a>
+          <a href="mailto:marina.marqueso@outlook.com">
+            <SiMicrosoftoutlook />
+          </a>
+        </div>
       </section>
       <BackAndForward back="/projects" forward="/" />
     </div>
