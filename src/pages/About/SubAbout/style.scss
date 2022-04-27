@@ -2,21 +2,17 @@
   z-index: 3;
   position: fixed;
   right: 0;
-  top: -1rem;
+  top: -2rem;
   color: var(--grey);
   font-size: 6rem;
 }
 
 #about-background-top-left {
+  border: 1px solid var(--grey);
+  width: 30%;
   position: fixed;
+  top: 7rem;
   left: 0;
-  top: -1rem;
-  color: var(--grey);
-  font-size: 6rem;
-  width: 25%;
-  height: 5rem;
-  border: 1px solid red;
-  z-index: 1;
 }
 
 #about-background-bottom-left {

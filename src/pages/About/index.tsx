@@ -67,7 +67,7 @@ export default function About() {
             I really like to learn more technologies and the area.
           </p>
           <p>
-            Currently, I'm in career transition, from Chemistry to Web Developer.
+            Currently, I'm in career transition, from Chemistry to Web Development.
             Since July of 2021, I'm a student at
             <a
               href="https://www.betrybe.com/"
@@ -77,8 +77,7 @@ export default function About() {
               {' '}
               Trybe
             </a>
-            . Always building
-            projects monthly and taking classes everyday.
+            . Building projects monthly and taking classes everyday.
           </p>
         </section>
         <section className="technologies">
