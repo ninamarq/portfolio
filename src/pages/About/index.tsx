@@ -47,7 +47,6 @@ export default function About() {
 
   return (
     <div className="about-container">
-      <Header />
       <SubAbout />
       <main>
         <h1>

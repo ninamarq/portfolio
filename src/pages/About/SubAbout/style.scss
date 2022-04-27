@@ -1,6 +1,12 @@
-#about-background-top-right {
-  z-index: 3;
+.about-background {
   position: fixed;
+  cursor: default;
+  opacity: 0.55;
+  text-shadow: 0 0 1rem #d1d1d13a;
+  user-select: none;
+}
+
+#about-background-top-right {
   right: 0;
   top: -2rem;
   color: var(--grey);
@@ -8,15 +14,13 @@
 }
 
 #about-background-top-left {
+  left: 0;
+  top: 6rem;
   border: 1px solid var(--grey);
   width: 30%;
-  position: fixed;
-  top: 6rem;
-  left: 0;
 }
 
 #about-background-bottom-left {
-  position: fixed;
   left: 1rem;
   bottom: -1rem;
   color: var(--grey);
