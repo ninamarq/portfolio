@@ -1,0 +1,28 @@
+.experience-background {
+  position: fixed;
+  cursor: default;
+  opacity: 0.55;
+  text-shadow: 0 0 1rem #d1d1d13a;
+  user-select: none;
+}
+
+#experience-background-top-right {
+  right: 0;
+  top: -2rem;
+  color: var(--grey);
+  font-size: 6rem;
+}
+
+#experience-background-top-left {
+  left: 0;
+  top: 6rem;
+  border: 1px solid var(--grey);
+  width: 30%;
+}
+
+#experience-background-bottom-left {
+  left: 1rem;
+  bottom: -1rem;
+  color: var(--grey);
+  font-size: 6rem;
+}

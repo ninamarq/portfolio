@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineCloudDownload } from 'react-icons/ai';
-import Header from '../../components/Header';
 import Profile from '../../assets/profile.jpeg';
 import './style.scss';
 import CV from '../../assets/curriculum_marina_marques.pdf';

@@ -2,7 +2,6 @@ import {
   SiCss3, SiHtml5, SiJavascript, SiReact, SiSass, SiTypescript,
 } from 'react-icons/si';
 import { GrNode } from 'react-icons/gr';
-import Header from '../../components/Header';
 import './style.scss';
 import SubAbout from './SubAbout';
 
