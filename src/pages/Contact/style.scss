@@ -28,17 +28,16 @@
     border-radius: 2rem;
     z-index: 5;
     justify-content: center;
-    width: 80%;
+    width: 70%;
     height: fit-content;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: var(--dark-blue);
 
     .contact-info {
       margin: 0;
-      color: #FFF;
       border-radius: 2rem 0 0 2rem;
       height: 100%;
-      background-color: var(--blue);
+      background-color: var(--light-blue);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -63,7 +62,7 @@
       justify-content: center;
       width: 100%;
       padding: 1.25rem;
-      background-color: var(--dark-blue);
+      background-color: var(--blue);
       color: #FFF;
       border-radius: 0 2rem 2rem 0;
 
@@ -88,7 +87,7 @@
 
         &:hover {
           cursor: pointer;
-          background-color: var(--blue);
+          opacity: 0.8;
           transition: .75s;
         }
       }

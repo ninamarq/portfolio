@@ -1,3 +1,4 @@
+import { ChangeEvent, useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillTelephoneFill, BsPinMap } from 'react-icons/bs';
 import { BiMailSend } from 'react-icons/bi';
@@ -6,6 +7,16 @@ import BackgroundPage from '../../components/BackgroundPage';
 import BackAndForward from '../../components/BackAndForward';
 
 export default function Contact() {
+  const [emailContent, setEmailContent] = useState({});
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setEmailContent({
+      ...emailContent,
+      [event.target.id]: event.target.value,
+    });
+  };
+  console.log(emailContent);
+
   return (
     <div className="contact-container">
       <BackgroundPage top="CON" bottom="TACT" />
@@ -32,20 +43,20 @@ export default function Contact() {
           <div>
             <label htmlFor="name">
               Name
-              <input type="text" id="name" />
+              <input onChange={(e) => handleChange(e)} type="text" id="name" />
             </label>
             <label htmlFor="email">
               Email
-              <input type="text" id="email" />
+              <input onChange={(e) => handleChange(e)} type="text" id="email" />
             </label>
           </div>
           <label htmlFor="subject">
             Subject
-            <input type="text" id="subject" className="alone-inline" />
+            <input onChange={(e) => handleChange(e)} type="text" id="subject" className="alone-inline" />
           </label>
           <label htmlFor="message">
             Message
-            <input type="text" id="message" className="alone-inline" />
+            <input onChange={(e) => handleChange(e)} type="text" id="message" className="alone-inline" />
           </label>
           <button type="submit">
             <BiMailSend />
