@@ -9,7 +9,6 @@ export default function Home() {
   const navigate = useNavigate();
   return (
     <div className="page-container">
-      <Header />
       <div className="left-container">
         <div>
           <h2>

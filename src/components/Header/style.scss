@@ -10,6 +10,7 @@
   position: fixed;
   right: 2rem;
   top: 20%;
+  z-index: 5;
 
   .link-list {
     display: flex;
@@ -24,7 +25,7 @@
       list-style: none;
       transition: .5s;
       font-size: 130%;
-      
+
       .pages-link {
         text-decoration: none;
         all: unset;
