@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import {
   SiCss3, SiHtml5, SiJavascript, SiReact, SiSass, SiTypescript,
 } from 'react-icons/si';
-import { GrNode } from 'react-icons/gr';
+import { GrNode, GrFormNextLink } from 'react-icons/gr';
 import './style.scss';
 import SubAbout from './SubAbout';
 
@@ -102,6 +103,9 @@ export default function About() {
             }
           </ul>
         </section>
+        <span className="link-to">
+          <Link to="/experiences"><GrFormNextLink /></Link>
+        </span>
       </main>
     </div>
   );

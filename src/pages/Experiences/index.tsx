@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import { HiAcademicCap } from 'react-icons/hi';
 import { TiDeviceLaptop } from 'react-icons/ti';
+import { GrFormNextLink, GrFormPreviousLink } from 'react-icons/gr';
 import SubExperience from './SubExperience';
 import './style.scss';
 
@@ -40,6 +42,12 @@ export default function Experiences() {
           </div>
         </section>
       </div>
+      <span className="link-back">
+        <Link to="/about"><GrFormPreviousLink /></Link>
+      </span>
+      <span className="link-to">
+        <Link to="/projects"><GrFormNextLink /></Link>
+      </span>
     </div>
   );
 }
