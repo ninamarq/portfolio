@@ -1,13 +1,20 @@
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillTelephoneFill, BsPinMap } from 'react-icons/bs';
 import { BiMailSend } from 'react-icons/bi';
+import './style.scss';
+import BackgroundPage from '../../components/BackgroundPage';
+import BackAndForward from '../../components/BackAndForward';
 
 export default function Contact() {
   return (
-    <div>
-      <h1>Contact</h1>
-      <section>
-        <div>
+    <div className="contact-container">
+      <BackgroundPage top="CON" bottom="TACT" />
+      <h1>
+        Con
+        <span>tact</span>
+      </h1>
+      <section className="card-infos">
+        <div className="contact-info">
           <h2>
             <BsFillTelephoneFill />
             +55 31 99751-6603
@@ -24,23 +31,29 @@ export default function Contact() {
         <form>
           <div>
             <label htmlFor="name">
-              <input type="text" id="name" placeholder="Your Name" />
+              Name
+              <input type="text" id="name" />
             </label>
             <label htmlFor="email">
-              <input type="text" id="email" placeholder="Your Email" />
+              Email
+              <input type="text" id="email" />
             </label>
           </div>
           <label htmlFor="subject">
-            <input type="text" id="subject" placeholder="Subject" />
+            Subject
+            <input type="text" id="subject" className="alone-inline" />
           </label>
           <label htmlFor="message">
-            <input type="text" id="message" placeholder="Message" />
+            Message
+            <input type="text" id="message" className="alone-inline" />
           </label>
           <button type="submit">
             <BiMailSend />
+            Send
           </button>
         </form>
       </section>
+      <BackAndForward back="/projects" forward="/" />
     </div>
   );
 }
