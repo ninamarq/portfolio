@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
 import {
   SiCss3, SiHtml5, SiJavascript, SiReact, SiSass, SiTypescript,
 } from 'react-icons/si';
-import { GrNode, GrFormNextLink } from 'react-icons/gr';
+import { GrNode } from 'react-icons/gr';
 import './style.scss';
-import SubAbout from './SubAbout';
+import BackAndForward from '../../components/BackAndForward';
+import BackgroundPage from '../../components/BackgroundPage';
 
 export default function About() {
   const technologies = [
@@ -47,7 +47,7 @@ export default function About() {
 
   return (
     <div className="about-container">
-      <SubAbout />
+      <BackgroundPage top="ABOUT" bottom="ME" />
       <main>
         <h1>
           <span>About </span>
@@ -103,9 +103,7 @@ export default function About() {
             }
           </ul>
         </section>
-        <span className="link-to">
-          <Link to="/experiences"><GrFormNextLink /></Link>
-        </span>
+        <BackAndForward back="/" forward="/experiences" />
       </main>
     </div>
   );

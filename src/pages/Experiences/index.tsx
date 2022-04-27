@@ -1,14 +1,13 @@
-import { Link } from 'react-router-dom';
 import { HiAcademicCap } from 'react-icons/hi';
 import { TiDeviceLaptop } from 'react-icons/ti';
-import { GrFormNextLink, GrFormPreviousLink } from 'react-icons/gr';
-import SubExperience from './SubExperience';
+import BackAndForward from '../../components/BackAndForward';
+import BackgroundPage from '../../components/BackgroundPage';
 import './style.scss';
 
 export default function Experiences() {
   return (
     <div className="experience-container">
-      <SubExperience />
+      <BackgroundPage top="EXPERI" bottom="ENCES" />
       <h1>
         Experi
         <span>ences</span>
@@ -42,12 +41,7 @@ export default function Experiences() {
           </div>
         </section>
       </div>
-      <span className="link-back">
-        <Link to="/about"><GrFormPreviousLink /></Link>
-      </span>
-      <span className="link-to">
-        <Link to="/projects"><GrFormNextLink /></Link>
-      </span>
+      <BackAndForward back="/about" forward="/projects" />
     </div>
   );
 }
