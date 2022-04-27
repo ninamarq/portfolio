@@ -3,7 +3,8 @@ import {
 } from 'react-icons/si';
 import { GrNode } from 'react-icons/gr';
 import './style.scss';
-import SubAbout from './SubAbout';
+import BackAndForward from '../../components/BackAndForward';
+import BackgroundPage from '../../components/BackgroundPage';
 
 export default function About() {
   const technologies = [
@@ -46,7 +47,7 @@ export default function About() {
 
   return (
     <div className="about-container">
-      <SubAbout />
+      <BackgroundPage top="ABOUT" bottom="ME" />
       <main>
         <h1>
           <span>About </span>
@@ -102,6 +103,7 @@ export default function About() {
             }
           </ul>
         </section>
+        <BackAndForward back="/" forward="/experiences" />
       </main>
     </div>
   );

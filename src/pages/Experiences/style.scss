@@ -36,6 +36,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+      padding: 0 1rem;
 
       &:last-child {
         border-left: 1px solid var(--grey);

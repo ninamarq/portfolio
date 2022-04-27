@@ -1,0 +1,16 @@
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 1rem 0;
+
+  span {
+    font-size: 3rem;
+    transition: .5s;
+
+    &:hover {
+      opacity: 0.8;
+      transition: .5s;
+    }
+  }
+}

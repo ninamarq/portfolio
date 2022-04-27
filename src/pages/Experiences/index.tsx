@@ -1,12 +1,13 @@
 import { HiAcademicCap } from 'react-icons/hi';
 import { TiDeviceLaptop } from 'react-icons/ti';
-import SubExperience from './SubExperience';
+import BackAndForward from '../../components/BackAndForward';
+import BackgroundPage from '../../components/BackgroundPage';
 import './style.scss';
 
 export default function Experiences() {
   return (
     <div className="experience-container">
-      <SubExperience />
+      <BackgroundPage top="EXPERI" bottom="ENCES" />
       <h1>
         Experi
         <span>ences</span>
@@ -40,6 +41,7 @@ export default function Experiences() {
           </div>
         </section>
       </div>
+      <BackAndForward back="/about" forward="/projects" />
     </div>
   );
 }
