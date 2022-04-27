@@ -4,6 +4,7 @@
   padding: 0;
   height: 100vh;
   overflow: hidden;
+  z-index: 5;
 
   main {
     display: flex;
@@ -84,7 +85,7 @@
             cursor: pointer;
             color: var(--light-blue);
             border: 1px solid var(--dark-blue);
-            transform: scale(1.05);
+            transform: scale(1.025);
           }
 
           svg {

@@ -1,0 +1,28 @@
+#about-background-top-right {
+  z-index: 3;
+  position: fixed;
+  right: 0;
+  top: -1rem;
+  color: var(--grey);
+  font-size: 6rem;
+}
+
+#about-background-top-left {
+  position: fixed;
+  left: 0;
+  top: -1rem;
+  color: var(--grey);
+  font-size: 6rem;
+  width: 25%;
+  height: 5rem;
+  border: 1px solid red;
+  z-index: 1;
+}
+
+#about-background-bottom-left {
+  position: fixed;
+  left: 1rem;
+  bottom: -1rem;
+  color: var(--grey);
+  font-size: 6rem;
+}

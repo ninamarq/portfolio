@@ -1,13 +1,12 @@
-import { useNavigate } from 'react-router-dom';
 import {
   SiCss3, SiHtml5, SiJavascript, SiReact, SiSass, SiTypescript,
 } from 'react-icons/si';
 import { GrNode } from 'react-icons/gr';
 import Header from '../../components/Header';
 import './style.scss';
+import SubAbout from './SubAbout';
 
 export default function About() {
-  const navigate = useNavigate();
   const technologies = [
     {
       name: 'HTML',
@@ -49,6 +48,7 @@ export default function About() {
   return (
     <div className="about-container">
       <Header />
+      <SubAbout />
       <main>
         <h1>
           <span>About </span>
@@ -67,7 +67,8 @@ export default function About() {
             I really like to learn more technologies and the area.
           </p>
           <p>
-            Since July of 2021, I'm a web development student at
+            Currently, I'm in career transition, from Chemistry to Web Developer.
+            Since July of 2021, I'm a student at
             <a
               href="https://www.betrybe.com/"
               target="_blank"
