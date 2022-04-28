@@ -1,8 +1,10 @@
 import Swal from 'sweetalert2';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillTelephoneFill, BsPinMap } from 'react-icons/bs';
+import { BsFillTelephoneFill, BsGithub, BsPinMap } from 'react-icons/bs';
 import { BiMailSend } from 'react-icons/bi';
+import { GrLinkedin } from 'react-icons/gr';
+import { SiMicrosoftoutlook } from 'react-icons/si';
 import './style.scss';
 import BackgroundPage from '../../components/BackgroundPage';
 import BackAndForward from '../../components/BackAndForward';
@@ -50,6 +52,7 @@ export default function Contact() {
       </h1>
       <section className="card-infos">
         <div className="contact-info">
+          <h2 className="title-contact">Get in touch</h2>
           <h2>
             <BsFillTelephoneFill />
             +55 31 99751-6603
@@ -62,6 +65,14 @@ export default function Contact() {
             <BsPinMap />
             Minas Gerais, Brazil
           </h2>
+          <div className="contact-links">
+            <a href="https://www.linkedin.com/in/marina-marqueso/" target="_blank" rel="noreferrer">
+              <GrLinkedin />
+            </a>
+            <a href="https://github.com/ninamarq" target="_blank" rel="noreferrer">
+              <BsGithub />
+            </a>
+          </div>
         </div>
         <form onSubmit={(e) => handleSubmit(e)}>
           <div>
