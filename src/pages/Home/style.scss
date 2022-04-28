@@ -1,0 +1,164 @@
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .left-container {
+    height: 100vh;
+    background-color: var(--light-grey);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    padding: 0 1.5rem;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: .75rem 0;
+      width: 100%;
+
+      h1 {
+        margin: 0;
+        font-size: 4rem;
+        span {
+          color: var(--blue);
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: .25rem solid var(--yellow);
+          animation: blink .5s step-end infinite alternate;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent
+        }
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        span {
+          margin: 0 1.2rem;
+          display: inline-block;
+          transform: rotate(45deg);
+          animation: shaking 2s infinite;
+          font-size: 2rem;
+        }
+
+        @keyframes shaking {
+          0% {
+            transform: rotate(-45deg);
+          }
+          50% {
+            transform: rotate(30deg);
+          }
+          100% {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      h3 {
+        font-size: 1rem;
+        background-color: var(--blue);
+        padding: .5rem 2rem;
+        border-radius: 2rem 0 2rem 0;
+        width: 90%;
+        color: #FFF;
+      }
+    }
+
+    p {
+      line-height: 1.5rem;
+      margin: 0 0 .75rem 0;
+      a {
+        text-decoration: none;
+      }
+    }
+
+    section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 10%;
+      width: 100%;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--blue);
+        border: 0;
+        padding: .5rem;
+        width: 100%;
+        height: 80%;
+        border-radius: 2rem;
+        font-weight: 700;
+        margin: .75rem 1.25rem;
+        padding: 0 1rem;
+        transition: .75s;
+        color: #FFF;
+        text-decoration: none;
+
+        svg {
+          font-size: 1.5rem;
+          margin: 0 1rem;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--dark-blue);
+          transition: .75s;
+        }
+      }
+
+      button {
+        background-color: var(--light-grey);
+        border: .15rem solid var(--blue);
+        padding: .5rem;
+        width: 100%;
+        height: 80%;
+        border-radius: 2rem;
+        font-weight: 700;
+        font-size: 1rem;
+        margin: .75rem 1.25rem;
+        padding: 0 1rem;
+        transition: .75s;
+        color: var(--blue);
+
+        svg {
+          font-size: 1.5rem;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--light-blue);
+          transition: .75s;
+        }
+      }
+    }
+  }
+
+  .right-container {
+    height: 100vh;
+    background-color: var(--grey);
+    object-fit: contain;
+
+    img {
+      width:100%;
+      height:110%;
+      background-position-y: initial;
+    }
+  }
+}
