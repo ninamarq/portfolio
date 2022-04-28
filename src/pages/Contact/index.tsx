@@ -1,14 +1,13 @@
 import Swal from 'sweetalert2';
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, SyntheticEvent, useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillTelephoneFill, BsGithub, BsPinMap } from 'react-icons/bs';
 import { BiMailSend } from 'react-icons/bi';
 import { GrLinkedin } from 'react-icons/gr';
-import { SiMicrosoftoutlook } from 'react-icons/si';
 import './style.scss';
+import emailjs from '@emailjs/browser';
 import BackgroundPage from '../../components/BackgroundPage';
 import BackAndForward from '../../components/BackAndForward';
-import sendEmail from '../../services/sendEmail';
 
 export default function Contact() {
   const [emailContent, setEmailContent] = useState({
@@ -25,16 +24,28 @@ export default function Contact() {
     });
   };
 
-  const {
-    name, email, subject, message,
-  } = emailContent;
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
+    const target = event.target as typeof event.target & {
+      email: { value: string };
+      name: { value: string };
+      subject: { value: string };
+      message: { value: string };
+    } & HTMLFormElement;
+
+    const name = target.name.value;
+
     /* eslint-disable @typescript-eslint/return-await */
     /* eslint-disable @typescript-eslint/no-floating-promises */
     /* eslint-disable @typescript-eslint/no-misused-promises */
-    sendEmail(name, email, subject, message);
+    emailjs.sendForm('service_vdhf6sq', 'template_b66imob', target, 'MqYoZL2-7q6SBMPHX')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        /* eslint-disable @typescript-eslint/no-unsafe-member-access */
+        console.log(error.text);
+      });
+
     return Swal.fire({
       title: 'Email sent!',
       text: `Contratulagions ${name}, you sent a email to Marina 📧`,
@@ -78,20 +89,20 @@ export default function Contact() {
           <div>
             <label htmlFor="name">
               Name
-              <input onChange={(e) => handleChange(e)} type="text" id="name" />
+              <input onChange={(e) => handleChange(e)} type="text" name="from_name" id="name" />
             </label>
             <label htmlFor="email">
               Email
-              <input onChange={(e) => handleChange(e)} type="text" id="email" />
+              <input onChange={(e) => handleChange(e)} type="text" name="from_email" id="email" />
             </label>
           </div>
           <label htmlFor="subject">
             Subject
-            <input onChange={(e) => handleChange(e)} type="text" id="subject" className="alone-inline" />
+            <input onChange={(e) => handleChange(e)} type="text" name="subject" id="subject" className="alone-inline" />
           </label>
           <label htmlFor="message">
             Message
-            <input onChange={(e) => handleChange(e)} type="text" id="message" className="alone-inline" />
+            <input onChange={(e) => handleChange(e)} type="text" name="message" id="message" className="alone-inline" />
           </label>
           <button type="submit">
             <BiMailSend />
