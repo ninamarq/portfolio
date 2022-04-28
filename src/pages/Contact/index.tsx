@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillTelephoneFill, BsPinMap } from 'react-icons/bs';
@@ -29,8 +30,15 @@ export default function Contact() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     /* eslint-disable @typescript-eslint/return-await */
+    /* eslint-disable @typescript-eslint/no-floating-promises */
     /* eslint-disable @typescript-eslint/no-misused-promises */
-    return sendEmail(name, email, subject, message);
+    sendEmail(name, email, subject, message);
+    return Swal.fire({
+      title: 'Email sent!',
+      text: `Contratulagions ${name}, you sent a email to Marina 📧`,
+      icon: 'success',
+      confirmButtonText: 'Cool',
+    });
   };
 
   return (
