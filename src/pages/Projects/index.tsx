@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import BackAndForward from '../../components/BackAndForward';
 import BackgroundPage from '../../components/BackgroundPage';
-import getProjects, { IProject } from '../../services/getProjects';
+import { IProject } from '../../services/getProjects';
 import './style.scss';
 
 export default function Projects() {
