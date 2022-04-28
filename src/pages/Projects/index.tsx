@@ -50,7 +50,7 @@ export default function Projects() {
                 <div>
                   <h2>{element.name}</h2>
                   <p>{element.description}</p>
-                  <div>
+                  <div className="a-container">
                     <a href={element.github_link} target="_blank" rel="noreferrer">
                       <BsGithub />
                       Git Repository
