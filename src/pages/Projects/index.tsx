@@ -1,4 +1,5 @@
 import { BsGithub } from 'react-icons/bs';
+import { CgWebsite } from 'react-icons/cg';
 import BackAndForward from '../../components/BackAndForward';
 import BackgroundPage from '../../components/BackgroundPage';
 import { IProject } from '../../services/getProjects';
@@ -20,12 +21,15 @@ export default function Projects() {
       name: 'createStore( )',
       github_link: 'https://github.com/ninamarq/create-store',
       img_link: 'https://github.com/ninamarq/create-store/blob/main/createstore.png?raw=true',
+      description: 'Website built to study Hooks, API usage and CSS',
+      deploy: 'https://createstore.netlify.app/',
     },
     {
       id: 2,
       name: 'crud-typescript',
       github_link: 'https://github.com/ninamarq/crud-typescript',
       img_link: 'https://github.com/ninamarq/crud-typescript/blob/main/assets/telaInsomnia.png?raw=true',
+      description: 'Database built to study Node.js and Typescript',
     },
   ];
 
@@ -45,11 +49,20 @@ export default function Projects() {
                 <img src={element.img_link} alt={element.name} />
                 <div>
                   <h2>{element.name}</h2>
+                  <p>{element.description}</p>
                   <div>
                     <a href={element.github_link} target="_blank" rel="noreferrer">
                       <BsGithub />
                       Git Repository
                     </a>
+                    {
+                      element?.deploy && (
+                        <a href={element.deploy} target="_blank" rel="noreferrer">
+                          <CgWebsite />
+                          Acces WebSite
+                        </a>
+                      )
+                    }
                   </div>
                 </div>
               </section>
