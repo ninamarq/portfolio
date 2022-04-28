@@ -12,7 +12,7 @@
 
   h1 {
     margin: 2rem 0;
-    font-size: 4rem;
+    font-size: 3.5rem;
     align-self: center;
   }
 
@@ -30,13 +30,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 50%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 
     .experiences-cards {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      padding: 0 1rem;
+      margin: 0;
 
       &:last-child {
         border-left: 1px solid var(--grey);
@@ -49,9 +52,10 @@
         align-self: center;
         svg {
           color: var(--dark-blue);
-          margin: 0 0 0 3rem;
+          margin: 0 0 0 1.5rem;
         }
       }
+
 
       div {
         display: flex;
@@ -59,7 +63,7 @@
         align-items: flex-start;
         justify-content: center;
         width: 100%;
-        margin: 1.25rem;
+        margin: 1rem;
         padding: 0 .5rem;
 
         h4 {

@@ -19,14 +19,14 @@ export default function Experiences() {
             <HiAcademicCap />
           </h2>
           <div>
-            <h4>February 2019 - July 2023</h4>
-            <h3>Química Tecnológica</h3>
-            <p>Universidade Federal de Minas Gerais</p>
-          </div>
-          <div>
             <h4>July 2020 - August 2022</h4>
             <h3>Web Development | Full-Stack</h3>
             <p>Trybe</p>
+          </div>
+          <div>
+            <h4>February 2019 - July 2023</h4>
+            <h3>Química Tecnológica</h3>
+            <p>Universidade Federal de Minas Gerais</p>
           </div>
         </section>
         <section className="experiences-cards">

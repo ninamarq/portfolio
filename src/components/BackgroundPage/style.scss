@@ -4,12 +4,14 @@
   opacity: 0.55;
   text-shadow: 0 0 1rem #d1d1d13a;
   user-select: none;
+  z-index: 1;
 }
 
 #background-top-right {
   right: 0;
   top: -2rem;
   color: var(--grey);
+  z-index: 1;
   font-size: 6rem;
 }
 
@@ -17,6 +19,7 @@
   left: 0;
   top: 6rem;
   border: 1px solid var(--grey);
+  z-index: 1;
   width: 30%;
 }
 
@@ -24,5 +27,6 @@
   left: 1rem;
   bottom: -1rem;
   color: var(--grey);
+  z-index: 1;
   font-size: 6rem;
 }
