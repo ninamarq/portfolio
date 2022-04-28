@@ -5,6 +5,8 @@ export interface IProject {
   img_link: string;
   createdAt?: string;
   updatedAt?: string;
+  deploy?: string;
+  description?: string;
 }
 
 export default function getProjects() {

@@ -33,12 +33,16 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      width: 30rem;
-      height: 25rem;
+      width: 20rem;
+      height: 30rem;
       margin: 2rem;
-      border-radius: 2rem;
+      border-radius: 1rem;
       transition: .5s;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+      h2 {
+        color: var(--dark-blue);
+      }
 
       &:hover {
         box-shadow: rgba(99, 99, 99, 0.363) 0px 2px 8px 0px;
@@ -46,8 +50,8 @@
       }
 
       img {
-        border-radius: 2rem 2rem 0 0;
-        width: 30rem;
+        border-radius: 1rem 1rem 0 0;
+        width: 100%;
         height: 15rem;
         margin: 0;
         padding: 0;
@@ -59,36 +63,48 @@
         align-items: flex-start;
         justify-content: flex-start;
         width: 100%;
-        height: 10rem;
-        border-radius: 0 0 2rem 2rem;
+        height: 15rem;
+        border-radius: 0 0 1rem 1rem;
         margin: 0;
         opacity: 0.9;
+
+        p {
+          margin: 0 .5rem;
+        }
+
+        .a-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          width: 100%;
+          margin: .25rem;
+
+          a {
+            margin: .25rem;
+            display: flex;
+            border-radius: 2rem;
+            font-weight: 700;
+            width: 9rem;
+            height: 3rem;
+            justify-content: space-around;
+            align-items: center;
+            transition: .5s;
+            background-color: var(--blue);
+            color: #FFF;
+
+            &:hover {
+              opacity: 0.9;
+              background-color: var(--dark-blue);
+              transition: .5s;
+            }
+          }
+        }
 
         h2 {
           margin: 1rem;
           font-size: 2.25rem;
         }
 
-        a {
-          align-self: flex-end;
-          margin: .25rem 1rem;
-          display: flex;
-          border-radius: 2rem;
-          font-weight: 700;
-          width: 12rem;
-          height: 3rem;
-          justify-content: space-around;
-          align-items: center;
-          transition: .5s;
-          background-color: var(--blue);
-          color: #FFF;
-
-          &:hover {
-            opacity: 0.9;
-            background-color: var(--dark-blue);
-            transition: .5s;
-          }
-        }
       }
     }
   }
